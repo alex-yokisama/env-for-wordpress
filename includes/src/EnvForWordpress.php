@@ -18,7 +18,7 @@ class EnvForWordpress {
         static::initProviders();
     }
 
-    public static function get(string $key, mixed $default = null)
+    public static function get(string $key, $default = null)
     {
         foreach (static::$providers as $provider) {
             $value = $provider->get($key);
